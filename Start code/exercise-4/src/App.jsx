@@ -1,6 +1,18 @@
-import Place from "./components/Place.jsx";
-import { AVAILABLE_PLACES } from "./data.js";
-
+import PlaceComponent from "./components/Place.jsx";
+import AVAILABLE_PLACES from "./data.js";
+function Places() {
+  return (
+    <div>
+      {AVAILABLE_PLACES.map((place) => (
+        <PlaceComponent
+          key={place.id}
+          image={place.image}
+          title={place.title}
+        />
+      ))}
+    </div>
+  );
+}
 function App() {
   return (
     <>
@@ -11,7 +23,7 @@ function App() {
       <main>
         <section className="places-category">
           <ul className="places">
-            {/* For each place from AVAILABLE_PLACES, create a Place component */}
+            <Places/>
           </ul>
         </section>
       </main>

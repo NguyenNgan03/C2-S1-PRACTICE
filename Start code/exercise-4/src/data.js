@@ -17,7 +17,7 @@ import victoriaFallsImg from "./assets/victoria-falls.jpg";
 import machuPicchuImg from "./assets/machu-picchu.jpg";
 import amazonRiverImg from "./assets/amazon-river.jpg";
 
-export const AVAILABLE_PLACES = [
+const AVAILABLE_PLACES = [
   {
     id: "p1",
     title: "Forest Waterfall",
@@ -163,3 +163,4 @@ export const AVAILABLE_PLACES = [
     },
   },
 ];
+export default AVAILABLE_PLACES;
