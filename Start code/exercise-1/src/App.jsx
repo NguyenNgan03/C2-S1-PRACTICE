@@ -1,10 +1,9 @@
 import React from "react";
-import User from "./component/User.jsx";
-import { DATA } from "./data/user.js";
+import Users from "./component/User.jsx";
 function User() {
   return (
     <div>
-      <User firstName={"Nguyen"} lastName={"Ngan"} title={"PN React reactjs"} />
+      <Users firstName={"Nguyen"} lastName={"Ngan"} title={"PN React reactjs"} />
     </div>
   );
 }

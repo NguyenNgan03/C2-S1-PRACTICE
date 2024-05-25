@@ -3,8 +3,8 @@ export default function User(props) {
   return (
     <li>
       <div id="user" data-testid="user">
-        <h2>TODO: {(firstName, lastName)}</h2>
-        <p>TODO: {title}</p>
+        <h2>{firstName} {lastName}</h2>
+        <p>{title}</p>
       </div>
     </li>
   );

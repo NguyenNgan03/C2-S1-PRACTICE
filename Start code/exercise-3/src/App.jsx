@@ -1,19 +1,20 @@
 import React from "react";
-import { ALL_PNV_TEACHERS } from "./teachers.js";
-import user from "./components/user.jsx"
+import ALL_PNV_TEACHERS from "./teachers.js";
+import UserComponent from "./components/user.jsx"
 
-// NO change to perform here...
 function User() {
-  <div>
+  return (
+    <div>
     {ALL_PNV_TEACHERS.map((user) => (
-      <user
+      <UserComponent
         key={user.id}
         firstName={user.firstName}
         lastName={user.lastName}
         title={user.title}
       />
     ))}
-  </div>;
+  </div>
+  );
 }
 
 function App() {

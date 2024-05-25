@@ -1,6 +1,6 @@
 import React from "react";
 import UserComponents from "./components/User.jsx";
-import { USERDATA } from "./data/dataUser.js";
+import USERDATA from "./data/dataUser.js";
 
 // TODO Edit the User component code to be able to display DIFFERENT users !
 function User() {
