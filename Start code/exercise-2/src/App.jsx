@@ -1,25 +1,22 @@
 import React from "react";
-
-export const vinhData = {
-  firstName: "Vinh",
-  lastName: "Hoang Nhu",
-  title: "PN Training Manager",
-};
-
-export const myData = {
-  firstName: "My",
-  lastName: "Ngo",
-  title: "PN Trainer",
-};
+import UserComponents from "./components/User.jsx";
+import { USERDATA } from "./data/dataUser.js";
 
 // TODO Edit the User component code to be able to display DIFFERENT users !
-export function User() {
+function User() {
   return (
-    <div id="user" data-testid="user">
-      <h2>TODO: FIRST NAME LAST NAME</h2>
-      <p>TODO: TITLE</p>
-    </div>
+    <div>
+    {USERDATA.map((user) => (
+      <UserComponents
+        key={user.id}
+        firstName={user.firstName}
+        lastName={user.lastName}
+        title={user.title}
+      />
+    ))}
+  </div>
   );
+  
 }
 
 function App() {
@@ -27,8 +24,10 @@ function App() {
     <div id="app">
       <h1>PNV React Team !!</h1>
       <p>Here are some PNV React masters, do you know them?</p>
-      <User /> {/* This line needs some changes*/}
-      <User /> {/* This line needs some changes*/}
+      <ul>
+          {User()}
+      </ul>
+      
     </div>
   );
 }
