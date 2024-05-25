@@ -3,10 +3,10 @@ import { ALL_PNV_TEACHERS } from "./teachers.js";
 import user from "./components/user.jsx"
 
 // NO change to perform here...
-export function User({ user }) {
+function User() {
   <div>
     {ALL_PNV_TEACHERS.map((user) => (
-      <UserComponents
+      <user
         key={user.id}
         firstName={user.firstName}
         lastName={user.lastName}
